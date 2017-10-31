@@ -8,8 +8,6 @@ function Panal (x,y) {
 
 Panal.prototype.draw=function(panal){
   var img = new Image()
-  img.onload = function() {
-    ctx.drawImage(img, panal.x, panal.y, 110, 70)
-  }
-  img.src = "./images/panal.png"
+  img.src = "./images/panal.png";
+    ctx.drawImage(img, this.x, this.y, 110, 70)
 }

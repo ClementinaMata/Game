@@ -1,12 +1,16 @@
 var canvas = document.getElementById("bee-game")
 var ctx = canvas.getContext('2d')
 
-var bee = new Bee(10, 15, 6)
-var panal = new Panal(50, 60)
+var bee = new Bee(10, 25, 6);
+var panal = new Panal(490, 510);
+var map = new Map();
 
 
-canvas.width = canvas.height = 500;
+canvas.width = canvas.height = 600;
   bee.draw();
+  map.paintBoard();
+  panal.draw();
+
 function update() {
   requestAnimationFrame(update);
   if (bee.keys[38]) {
@@ -35,19 +39,22 @@ function update() {
   bee.velX *= bee.friction;
   bee.x += bee.velX;
 
-  if (bee.x >= 430) {
+  if (bee.x >= 550) {
     stopMove();
   } else if (bee.x <= 0) {
     stopMove();
   }
 
-  if (bee.y >= 460) {
+  if (bee.y >= 565) {
     stopMove();
   } else if (bee.y <= 5) {
     stopMove();
   }
   ctx.clearRect(0, 0, 1000, 1000);
   bee.draw()
+  map.paintBoard();
+  panal.draw();
+  map.paint2(32,14,250,140)
 }
 
 document.body.addEventListener("keydown", function(e) {
