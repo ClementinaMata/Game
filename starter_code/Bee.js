@@ -9,20 +9,10 @@ function Bee(x, y, speed) {
   this.speed = speed
   this.friction = 0.98
   this.keys = []
-  this.img =
-  this.draw = function(){
-    var img = new Image()
-    img.onload = function() {
-      ctx.drawImage(img, this.x, this.y, 70, 40)
-    }
-    img.src = "./images/bee.png"
-  }
 }
 
-// Bee.prototype.draw = function(bee){
-//   var img = new Image()
-//   img.onload = function() {
-//     ctx.drawImage(img, this.x, this.y, 70, 40)
-//   }
-//   img.src = "./images/bee.png"
-// }
+Bee.prototype.draw = function(){
+  var img = new Image()
+  img.src = "./images/bee.png";
+  ctx.drawImage (img, this.x, this.y, 70, 40);
+};
