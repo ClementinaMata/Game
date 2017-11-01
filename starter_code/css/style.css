@@ -1,7 +1,6 @@
 body {
   text-align: center;
   /*background-color: black;*/
-
 }
 
 #start-button {
@@ -21,13 +20,12 @@ body {
   border-radius: 10px;
 }
 
-#bee-game{
+#bee-game {
   border: 1px solid black;
-  height:650px;
-  width:850px;
+  height: 650px;
+  width: 850px;
   /*background-color: black;*/
   background-color: green;
   /*background-image: url('https://lh3.googleusercontent.com/VTLOq2cqpJ4Pe3I4blM6YUOy8wryg35gx3YMVX6GG4iP_aWHGln9hdPxNdwKMkthoY5c=h900');*/
   background-size: cover;
-
 }

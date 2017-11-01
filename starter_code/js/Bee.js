@@ -11,6 +11,7 @@ function Bee(x, y, speed) {
   this.speed = speed
   this.friction = 0.95
   this.keys = []
+  this.win = false;
 }
 
 Bee.prototype.draw = function(){
@@ -18,3 +19,17 @@ Bee.prototype.draw = function(){
   img.src = "./images/bee.png";
   ctx.drawImage (img, this.x, this.y, this.width, this.height);
 };
+Bee.prototype.stopMove = function(){
+    this.velX = 0;
+    this.velY = 0;
+    this.speed = 0;
+};
+
+Bee.prototype.youWin = function (){
+  if (this.x < panal.x + panal.width &&
+     this.x + this.width > panal.x &&
+     this.y < panal.y + panal.height &&
+     this.height + this.y > panal.y) {
+    this.win = true;
+ }
+}
