@@ -1,34 +1,32 @@
 var canvas = document.getElementById("bee-game")
 var ctx = canvas.getContext('2d')
 
-function Map(x, y, destinoX, destinoY){
+function Map(x, y, width, height) {
   this.x = x;
   this.y = y;
-  this.destinoX = destinoX;
-  this.destinoY = destinoY;
+  this.width = width;
+  this.height = height;
 }
 
-Map.prototype.paintBoard = function(){
-  ctx.fillRect(0,100,500,5)
-  ctx.fillRect(100,230,500,5)
-  ctx.fillRect(0,360,500,5)
-  ctx.fillRect(100,480,500,5)
-  // ctx.beginPath();
-  // ctx.moveTo(50,50);
-  // ctx.lineTo(100,100);
-  // ctx.stroke();
-}
+Map.prototype.paintBoard = function() {
+  ctx.fillRect(this.x, this.y, this.width, this.height)
+  // ctx.fillRect(100,230,500,5)
+  // ctx.fillRect(0,360,500,5)
+  // ctx.fillRect(100,480,500,5)
 
-Map.prototype.paint2 = function(){
-  ctx.beginPath();
-  ctx.moveTo(this.x,this.y);
-  ctx.lineTo(this.destinoX,this.destinoY);
-  ctx.stroke();
-}
+  //Second Stage
+  // ctx.fillRect(0,100,500,5)
+  // ctx.fillRect(300,230,500,5)
+  // ctx.fillRect(200,100,5,100)
+  // ctx.fillRect(300,230,5,100)
+  // ctx.fillRect(100,330,205,5)
+  // ctx.fillRect(100,230,5,250)
+  // ctx.fillRect(200,450,5,150)
+  // ctx.fillRect(300,300,5,150)
+  // ctx.fillRect(410,350,5,250)
+  // ctx.fillRect(410,350,80,5)
+  // ctx.fillRect(490,350,5,140)
 
-// Obstacle.prototype.crashWith = function(obstacle){
-// return !((this.bottom() < obstacle.top())    ||
-//          (this.top()    > obstacle.bottom()) ||
-//          (this.right()  < obstacle.left())   ||
-//          (this.left()   > obstacle.right()))
-// }
+  //Third Stage
+
+}

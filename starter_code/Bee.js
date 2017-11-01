@@ -6,6 +6,8 @@ function Bee(x, y, speed) {
   this.y = y
   this.velY = 0
   this.velX = 0
+  this.width = 50
+  this.height = 30
   this.speed = speed
   this.friction = 0.95
   this.keys = []
@@ -14,5 +16,5 @@ function Bee(x, y, speed) {
 Bee.prototype.draw = function(){
   var img = new Image()
   img.src = "./images/bee.png";
-  ctx.drawImage (img, this.x, this.y, 50, 30);
+  ctx.drawImage (img, this.x, this.y, this.width, this.height);
 };
