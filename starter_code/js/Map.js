@@ -9,7 +9,7 @@ function Map(x, y, width, height) {
 }
 
 Map.prototype.paintBoard = function() {
-  ctx.fillStyle = "#F5B022";
+  // ctx.fillStyle = "#F5B022";
   ctx.fillRect(this.x, this.y, this.width, this.height)
 }
 
@@ -33,14 +33,14 @@ var map12 = new Map(410, 350, 5, 250);
 var map13 = new Map(410, 350, 80, 5);
 var map14 = new Map(490, 350, 5, 140);
 
-function createLevelOne (){
+function createLevelOne() {
   map.paintBoard();
   map1.paintBoard();
   map2.paintBoard();
   map3.paintBoard();
 }
 
-function createLevelTwo (){
+function createLevelTwo() {
   map4.paintBoard();
   map5.paintBoard();
   map6.paintBoard();

@@ -11,25 +11,51 @@ function Bee(x, y, speed) {
   this.speed = speed
   this.friction = 0.95
   this.keys = []
-  this.win = false;
+  this.level = 1;
 }
 
-Bee.prototype.draw = function(){
+Bee.prototype.draw = function() {
   var img = new Image()
   img.src = "./images/bee.png";
-  ctx.drawImage (img, this.x, this.y, this.width, this.height);
+  ctx.drawImage(img, this.x, this.y, this.width, this.height);
 };
-Bee.prototype.stopMove = function(){
-    this.velX = 0;
-    this.velY = 0;
-    this.speed = 0;
+Bee.prototype.stopMove = function() {
+  this.velX = 0;
+  this.velY = 0;
+  this.speed = 0;
 };
-
-Bee.prototype.youWin = function (){
+Bee.prototype.youWin = function() {
   if (this.x < panal.x + panal.width &&
-     this.x + this.width > panal.x &&
-     this.y < panal.y + panal.height &&
-     this.height + this.y > panal.y) {
-    this.win = true;
- }
+    this.x + this.width > panal.x &&
+    this.y < panal.y + panal.height &&
+    this.height + this.y > panal.y) {
+    this.level += 1; this.x = 10; this.y = 25;
+  }
+};
+Bee.prototype.controller = function() {
+  if (this.keys[38]) {
+    if (this.velY > -this.speed) {
+      this.velY--;
+    }
+  }
+  if (this.keys[40]) {
+    if (this.velY < this.speed) {
+      this.velY++;
+    }
+  }
+  if (this.keys[39]) {
+    if (this.velX < this.speed) {
+      this.velX++;
+    }
+  }
+  if (this.keys[37]) {
+    if (this.velX > -this.speed) {
+      this.velX--;
+    }
+
+  }
+  this.velY *= this.friction;
+  this.y += this.velY;
+  this.velX *= this.friction;
+  this.x += this.velX;
 }
