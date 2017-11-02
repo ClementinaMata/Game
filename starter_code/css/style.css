@@ -3,30 +3,59 @@ body {
   background-color: black;
 }
 
+.abeja-logo {
+  margin-top: 120px;
+  height: 300px;
+  width: 298px;
+  border-radius: 20px;
+}
+
 #start-button {
-  background-color: #FFC730;
+  background-color: #FCCB37;
   height: 90px;
   width: 300px;
   border-radius: 20px;
-  border: #FFC730;
+  border: #FCCB37;
   font-size: 36px;
-  font-family: Slack-Averta, appleLogo, sans-serif;
-}
-
-.abeja-logo {
-  margin-top: 160px;
-  height: 250px;
-  width: 298px;
-  border-radius: 10px;
+  font-family: Chalkduster, fantasy;
 }
 
 #bee-game {
+  margin:auto;
   border: 1px solid black;
   height: 650px;
   width: 850px;
-  /*background-color: black;*/
-  /*background-color: green;*/
   background-image: url('https://lh3.googleusercontent.com/VTLOq2cqpJ4Pe3I4blM6YUOy8wryg35gx3YMVX6GG4iP_aWHGln9hdPxNdwKMkthoY5c=h900');
   background-size: cover;
   border-width: 3px;
+}
+
+.second {
+  background-color: black;
+}
+
+.second p {
+  background-color: #FFC730;
+  height: 100px;
+  width: 600px;
+  border-radius: 20px;
+  font-size: 50px;
+  font-family: Chalkduster, fantasy;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.third {
+  background-color: black;
+}
+
+#restart {
+  background-color: #FCCB37;
+  height: 90px;
+  width: 300px;
+  border-radius: 20px;
+  border: #FCCB37;
+  font-size: 36px;
+  font-family: Chalkduster, fantasy;
+  margin-top: 200px;
 }

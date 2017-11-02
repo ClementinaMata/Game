@@ -1,7 +1,11 @@
+$('canvas').css('display', 'none');
+$('.second').css('display', 'none');
+$('.third').css('display', 'none');
+
 var canvas = document.getElementById("bee-game")
 var ctx = canvas.getContext('2d')
 
-var bee = new Bee(10, 25, 6);
+var bee = new Bee(10, 25);
 var panal = new Panal(467, 480);
 
 canvas.width = canvas.height = 600;
@@ -25,6 +29,11 @@ function update() {
       createCollisionTwo();
       bee.youWin();
       break;
+    case 3:
+      createLevelThree()
+      createCollisionThree();
+      bee.congratulations();
+      break;
   }
 }
 document.body.addEventListener("keydown", function(e) {
@@ -33,6 +42,16 @@ document.body.addEventListener("keydown", function(e) {
 document.body.addEventListener("keyup", function(e) {
   bee.keys[e.keyCode] = false;
 });
+
 update();
 var audio =  new Audio ("music.mp3");
 audio.play();
+
+  $("#start-button").on('click', function() {
+    $('.first').css('display', 'none');
+    $('canvas').css('display', 'block');
+  })
+
+  $('.second').on('click',function(){
+    location.reload();
+  });
