@@ -16,7 +16,7 @@ function Bee(x, y) {
 
 Bee.prototype.draw = function() {
   var img = new Image()
-  img.src = "./images/bee.png";
+  img.src = "starter_code/images/bee.png";
   ctx.drawImage(img, this.x, this.y, this.width, this.height);
 };
 Bee.prototype.youLost = function() {

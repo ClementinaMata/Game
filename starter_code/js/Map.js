@@ -14,7 +14,7 @@ Map.prototype.paintBoard = function() {
 }
 
 Map.prototype.levelOne = function() {
-  ctx.fillText("Level 1",520,25);
+  ctx.fillText("Level 1",500,25);
   ctx.font="20px Arial";
 }
 

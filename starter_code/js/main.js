@@ -7,7 +7,7 @@ var ctx = canvas.getContext('2d')
 
 var bee = new Bee(10, 25);
 var panal = new Panal(467, 480);
-var time = new Time (500,20);
+// var time = new Time ();
 
 canvas.width = canvas.height = 600;
 
@@ -25,6 +25,7 @@ function update() {
       createCollisionOne();
       map.levelOne();
       // time.draw();
+      // time.second();
       bee.youWin();
       break;
     case 2:
@@ -56,6 +57,7 @@ audio.play();
 $("#start-button").on('click', function() {
   $('.first').css('display', 'none');
   $('canvas').css('display', 'block');
+
 })
 //when you loose, redirects to start page
 $('.second').on('click', function() {
