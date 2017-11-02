@@ -21,7 +21,7 @@ body {
 }
 
 #bee-game {
-  margin:auto;
+  margin: auto;
   border: 1px solid black;
   height: 650px;
   width: 850px;
@@ -47,6 +47,33 @@ body {
 
 .third {
   background-color: black;
+  margin-top: 137px;
+  margin-left: 300px;
+}
+
+.third p {
+  background-color: #FFC730;
+  height: 200px;
+  width: 600px;
+  border-radius: 20px;
+  font-size: 50px;
+  font-family: Chalkduster, fantasy;
+  padding-top: 40px;
+  padding-left: 20px;
+  position: absolute;
+}
+
+#play-again {
+  background-color: #FCCB37;
+  height: 90px;
+  width: 300px;
+  border-radius: 20px;
+  border: #FCCB37;
+  font-size: 36px;
+  font-family: Chalkduster, fantasy;
+  position: absolute;
+  top: 450px;
+  left: 475px;
 }
 
 #restart {

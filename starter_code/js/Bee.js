@@ -19,7 +19,7 @@ Bee.prototype.draw = function() {
   img.src = "./images/bee.png";
   ctx.drawImage(img, this.x, this.y, this.width, this.height);
 };
-Bee.prototype.youLost = function (){
+Bee.prototype.youLost = function() {
   $('canvas').css('display', 'none');
   $('.second').css('display', 'block');
 };
@@ -29,20 +29,29 @@ Bee.prototype.stopMove = function() {
   this.speed = 0;
   this.youLost();
 };
+//next level function
 Bee.prototype.youWin = function() {
   if (this.x < panal.x + panal.width &&
     this.x + this.width > panal.x &&
     this.y < panal.y + panal.height &&
     this.height + this.y > panal.y) {
-    this.level += 1; this.x = 10; this.y = 25; this.friction += 0.02; this.speed += 10;
+    this.level += 1;
+    this.x = 10;
+    this.y = 25;
+    this.friction += 0.02;
+    this.speed += 10;
   }
 };
-Bee.prototype.appearCongrats = function (){
+//appears when you win
+Bee.prototype.appearCongrats = function() {
   $('canvas').css('display', 'none');
   $('.third').css('display', 'block');
+  this.velX = 0;
+  this.velY = 0;
+  this.speed = 0;
 };
 
-Bee.prototype.congratulations = function (){
+Bee.prototype.congratulations = function() {
   if (this.x < panal.x + panal.width &&
     this.x + this.width > panal.x &&
     this.y < panal.y + panal.height &&
