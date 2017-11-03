@@ -14,7 +14,16 @@ canvas.width = canvas.height = 600;
 function update() {
   requestAnimationFrame(update);
   bee.controller();
-  // collisionCanvas();
+  if (bee.x >= 550) {
+    bee.stopMove();
+  } else if (bee.x <= 0) {
+    bee.stopMove();
+  }
+  if (bee.y >= 565) {
+    bee.stopMove();
+  } else if (bee.y <= 5) {
+    bee.stopMove();
+  }
   ctx.clearRect(0, 0, 1000, 1000);
   bee.draw();
   panal.draw();
@@ -23,7 +32,10 @@ function update() {
   switch (bee.level) {
     case 1:
       createLevelOne();
-      createCollisionOne();
+      mapCollisions(map);
+      mapCollisions(map1);
+      mapCollisions(map2);
+      mapCollisions(map3);
       map.levelOne();
       // time.draw();
       // time.second();
@@ -31,13 +43,27 @@ function update() {
       break;
     case 2:
       createLevelTwo();
-      createCollisionTwo();
+      mapCollisions(map4);
+      mapCollisions(map5);
+      mapCollisions(map6);
+      mapCollisions(map7);
+      mapCollisions(map8);
+      mapCollisions(map9);
+      mapCollisions(map10);
+      mapCollisions(map11);
+      mapCollisions(map12);
+      mapCollisions(map13);
+      mapCollisions(map14);
       map.levelTwo();
       bee.youWin();
       break;
     case 3:
       createLevelThree();
-      createCollisionThree();
+      mapCollisions(map15);
+      mapCollisions(map16);
+      mapCollisions(map17);
+      mapCollisions(map18);
+      mapCollisions(map19);
       map.levelThree();
       bee.congratulations();
       break;
