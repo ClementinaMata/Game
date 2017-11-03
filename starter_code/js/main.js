@@ -28,6 +28,14 @@ function update() {
   bee.draw();
   panal.draw();
 
+  function mapCollisions(maps) {
+    if (bee.x < maps.x + maps.width &&
+      bee.x + bee.width > maps.x &&
+      bee.y < maps.y + maps.height &&
+      bee.height + bee.y > maps.y) {
+      bee.stopMove();
+    }
+  }
 //switch to change levels
   switch (bee.level) {
     case 1:
