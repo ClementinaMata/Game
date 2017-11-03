@@ -86,11 +86,10 @@ body {
   font-family: Chalkduster, fantasy;
   margin-top: 200px;
 }
+
 .counter{
-  height: 20px;
-  background-color: transparent;
-  width: 20px;
-  position: absolute;
-  left:650px;
-  top:20px;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 20px;
 }

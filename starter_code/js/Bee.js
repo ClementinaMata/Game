@@ -40,6 +40,7 @@ Bee.prototype.youWin = function() {
     this.y = 25;
     this.friction += 0.01;
     this.speed += 8;
+    chronometer.time = 55;
   }
 };
 //appears when you win

@@ -3,18 +3,14 @@ function Chronometer(x,y,nombre){
   this.y = y;
   this.element = $("<div>").attr("class", nombre);
   this.element.css({top:this.y, left:this.x, position:"absolute"});
-  $("#bee-game").append(this.element);
-  this.time = 100;
+  $("#counter").append(this.element);
+  this.time = 45;
 }
-//Chronometer
 
-var i = 35;
-var intervalId = setInterval(function () {
-  console.log(i);
-
-  i--;
-
-  if (i < 0) {
-    clearInterval(intervalId);
+Chronometer.prototype.updateCounter = function(){
+  $(".counter").text("Time left: " +chronometer.time);
+  this.time--;
+  if(this.time<0){
+    bee.stopMove();
   }
-}, 1000);
+};

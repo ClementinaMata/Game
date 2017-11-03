@@ -7,7 +7,8 @@ var ctx = canvas.getContext('2d');
 
 var bee = new Bee(10, 25);
 var panal = new Panal(467, 480);
-// var time = new Time ();
+var chronometer = new Chronometer(850,22,'counter');
+
 
 canvas.width = canvas.height = 600;
 
@@ -45,8 +46,6 @@ function update() {
       mapCollisions(map2);
       mapCollisions(map3);
       map.levelOne();
-      // time.draw();
-      // time.second();
       bee.youWin();
       break;
     case 2:
@@ -93,11 +92,15 @@ audio.play();
 $("#start-button").on('click', function() {
   $('.first').css('display', 'none');
   $('canvas').css('display', 'block');
+  chronometer.updateCounter();
+  setInterval(function(){chronometer.updateCounter();}, 1000);
+
 
 });
 //when you loose, redirects to start page
 $('.second').on('click', function() {
   location.reload();
+
 });
 //when you win, redirects to start page
 $('#play-again').on('click', function() {
