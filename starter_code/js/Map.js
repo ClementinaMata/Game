@@ -1,5 +1,5 @@
-var canvas = document.getElementById("bee-game")
-var ctx = canvas.getContext('2d')
+var canvas = document.getElementById("bee-game");
+var ctx = canvas.getContext('2d');
 
 function Map(x, y, width, height) {
   this.x = x;
@@ -10,23 +10,23 @@ function Map(x, y, width, height) {
 
 
 Map.prototype.paintBoard = function() {
-  ctx.fillRect(this.x, this.y, this.width, this.height)
-}
+  ctx.fillRect(this.x, this.y, this.width, this.height);
+};
 
 Map.prototype.levelOne = function() {
-  ctx.fillText("Level 1",500,25);
-  ctx.font="20px Arial";
-}
+  ctx.fillText("Level 1", 500, 25);
+  ctx.font = "20px Arial";
+};
 
 Map.prototype.levelTwo = function() {
-  ctx.fillText("Level 2",520,25);
-  ctx.font="20px Arial";
-}
+  ctx.fillText("Level 2", 500, 25);
+  ctx.font = "20px Arial";
+};
 
 Map.prototype.levelThree = function() {
-  ctx.fillText("Level 3",520,25);
-  ctx.font="20px Arial";
-}
+  ctx.fillText("Level 3", 500, 25);
+  ctx.font = "20px Arial";
+};
 
 //lines level one
 var map = new Map(0, 100, 500, 5);

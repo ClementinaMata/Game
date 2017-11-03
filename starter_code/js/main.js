@@ -2,8 +2,8 @@ $('canvas').css('display', 'none');
 $('.second').css('display', 'none');
 $('.third').css('display', 'none');
 
-var canvas = document.getElementById("bee-game")
-var ctx = canvas.getContext('2d')
+var canvas = document.getElementById("bee-game");
+var ctx = canvas.getContext('2d');
 
 var bee = new Bee(10, 25);
 var panal = new Panal(467, 480);
@@ -19,6 +19,7 @@ function update() {
   bee.draw();
   panal.draw();
 
+//switch to change levels
   switch (bee.level) {
     case 1:
       createLevelOne();
@@ -35,7 +36,7 @@ function update() {
       bee.youWin();
       break;
     case 3:
-      createLevelThree()
+      createLevelThree();
       createCollisionThree();
       map.levelThree();
       bee.congratulations();
@@ -53,12 +54,13 @@ update();
 
 var audio = new Audio("music.mp3");
 audio.play();
+
 //start page disappears
 $("#start-button").on('click', function() {
   $('.first').css('display', 'none');
   $('canvas').css('display', 'block');
 
-})
+});
 //when you loose, redirects to start page
 $('.second').on('click', function() {
   location.reload();

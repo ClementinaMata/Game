@@ -1,21 +1,21 @@
-var canvas = document.getElementById("bee-game")
-var ctx = canvas.getContext('2d')
+var canvas = document.getElementById("bee-game");
+var ctx = canvas.getContext('2d');
 
 function Bee(x, y) {
-  this.x = x
-  this.y = y
-  this.velX = 0
-  this.velY = 0
-  this.width = 50
-  this.height = 30
-  this.speed = 6
-  this.friction = 0.95
-  this.keys = []
+  this.x = x;
+  this.y = y;
+  this.velX = 0;
+  this.velY = 0;
+  this.width = 50;
+  this.height = 30;
+  this.speed = 6;
+  this.friction = 0.95;
+  this.keys = [];
   this.level = 1;
 }
 
 Bee.prototype.draw = function() {
-  var img = new Image()
+  var img = new Image();
   img.src = "starter_code/images/bee.png";
   ctx.drawImage(img, this.x, this.y, this.width, this.height);
 };
@@ -38,8 +38,8 @@ Bee.prototype.youWin = function() {
     this.level += 1;
     this.x = 10;
     this.y = 25;
-    this.friction += 0.02;
-    this.speed += 10;
+    this.friction += 0.01;
+    this.speed += 8;
   }
 };
 //appears when you win
@@ -59,7 +59,7 @@ Bee.prototype.congratulations = function() {
     this.appearCongrats();
   }
 };
-
+//keyboard controller
 Bee.prototype.controller = function() {
   if (this.keys[38]) {
     if (this.velY > -this.speed) {
@@ -85,4 +85,4 @@ Bee.prototype.controller = function() {
   this.y += this.velY;
   this.velX *= this.friction;
   this.x += this.velX;
-}
+};
