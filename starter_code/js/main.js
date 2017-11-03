@@ -14,7 +14,7 @@ canvas.width = canvas.height = 600;
 function update() {
   requestAnimationFrame(update);
   bee.controller();
-  collisionCanvas();
+  // collisionCanvas();
   ctx.clearRect(0, 0, 1000, 1000);
   bee.draw();
   panal.draw();
@@ -52,7 +52,7 @@ document.body.addEventListener("keyup", function(e) {
 
 update();
 
-var audio = new Audio("music.mp3");
+var audio = new Audio("starter_code/music.mp3");
 audio.play();
 
 //start page disappears
