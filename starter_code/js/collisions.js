@@ -16,12 +16,12 @@ function collisionCanvas() {
 }
 //Function collisions
 function mapCollisions(maps) {
-  if (bee.x < maps.x + maps.width &&
-    bee.x + bee.width > maps.x &&
-    bee.y < maps.y + maps.height &&
-    bee.height + bee.y > maps.y) {
-    bee.stopMove();
-  }
+  // if (bee.x < maps.x + maps.width &&
+  //   bee.x + bee.width > maps.x &&
+  //   bee.y < maps.y + maps.height &&
+  //   bee.height + bee.y > maps.y) {
+  //   bee.stopMove();
+  // }
 }
 //Collisions level one
 function createCollisionOne() {
