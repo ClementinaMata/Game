@@ -1,31 +1,20 @@
-// var canvas = document.getElementById("bee-game");
-// var ctx = canvas.getContext('2d');
-//
-// function Time() {
-//   this.x = 100;
-//   this.y = 100;
-//
-// }
-// var chrono = 35;
-//
-// Time.prototype.second = function() {
-//   var counter = 35;
-//   var callbackFunction = function() {
-//
-//     chrono = ("0" + counter).slice(-2);
-//     timeoutId = setTimeout(callbackFunction, 1000);
-//     counter -= 1;
-//     console.log(counter);
-//     if (counter < 0) {
-//       clearTimeout(timeoutId);
-//       bee.stopMove();
-//     }
-//   };
-//   var timeoutId = setTimeout(callbackFunction, 0);
-// };
-//
-//
-// Time.prototype.draw = function() {
-//   ctx.fillText("Time left: " + chrono, 382, 25);
-//   ctx.font = "30px Arial";
-// };
+function Chronometer(x,y,nombre){
+  this.x = x;
+  this.y = y;
+  this.element = $("<div>").attr("class", nombre);
+  this.element.css({top:this.y, left:this.x, position:"absolute"});
+  $("#bee-game").append(this.element);
+  this.time = 100;
+}
+//Chronometer
+
+var i = 35;
+var intervalId = setInterval(function () {
+  console.log(i);
+
+  i--;
+
+  if (i < 0) {
+    clearInterval(intervalId);
+  }
+}, 1000);
