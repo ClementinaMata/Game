@@ -12,17 +12,17 @@ function Map(x, y, width, height) {
 Map.prototype.paintBoard = function() {
   ctx.fillRect(this.x, this.y, this.width, this.height);
 };
-
+//Text: Level 1
 Map.prototype.levelOne = function() {
   ctx.fillText("Level 1", 500, 25);
   ctx.font = "20px Arial";
 };
-
+//Text: Level 2
 Map.prototype.levelTwo = function() {
   ctx.fillText("Level 2", 500, 25);
   ctx.font = "20px Arial";
 };
-
+//Text: Level 3
 Map.prototype.levelThree = function() {
   ctx.fillText("Level 3", 500, 25);
   ctx.font = "20px Arial";
@@ -55,16 +55,16 @@ var map18 = new Map(480, 120, 5, 230);
 var map19 = new Map(360, 480, 260, 5);
 var map20 = new Map(360, 260, 5, 220);
 
-//draw lines level one
+//draw level one
 function createLevelOne() {
   map.paintBoard();
   map1.paintBoard();
   map2.paintBoard();
   map3.paintBoard();
-
+  map.levelOne();
 }
 
-//draw lines level two
+//draw level two
 function createLevelTwo() {
   map4.paintBoard();
   map5.paintBoard();
@@ -77,8 +77,9 @@ function createLevelTwo() {
   map12.paintBoard();
   map13.paintBoard();
   map14.paintBoard();
+  map.levelTwo();
 }
-//draw lines level three
+//draw level three
 function createLevelThree() {
   map15.paintBoard();
   map16.paintBoard();
@@ -86,5 +87,5 @@ function createLevelThree() {
   map18.paintBoard();
   map19.paintBoard();
   map20.paintBoard();
-
+  map.levelThree();
 }

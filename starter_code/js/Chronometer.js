@@ -1,3 +1,6 @@
+var canvas = document.getElementById("bee-game");
+var ctx = canvas.getContext('2d');
+
 function Chronometer(x,y,nombre){
   this.x = x;
   this.y = y;
@@ -7,6 +10,7 @@ function Chronometer(x,y,nombre){
   this.time = 45;
 }
 
+//Timer function
 Chronometer.prototype.updateCounter = function(){
   $(".counter").text("Time left: " +chronometer.time);
   this.time--;
